@@ -10,6 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-strings
+
 builder.Services.AddDbContext<FlashcardAppDbContext>( options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AzureDB"))
 );

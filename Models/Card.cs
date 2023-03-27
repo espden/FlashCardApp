@@ -5,7 +5,7 @@ namespace api.Models;
 
 public partial class Card
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 
     public string? Question { get; set; }
 
