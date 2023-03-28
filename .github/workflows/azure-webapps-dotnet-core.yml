@@ -23,7 +23,7 @@
          with:
            dotnet-version: '7.0.x'
        - name: Concatenate strings
-         run: echo "/bin/staticsites/${ env.GITHUB_DEPLOYMENT_ID }-swa-oryx/app/"
+         run: echo "/bin/staticsites/" ${{ env.GITHUB_DEPLOYMENT_ID }} "-swa-oryx/app/"
               ### echo "/bin/staticsites/${ env.GITHUB_DEPLOYMENT_ID }-swa-oryx/app/"
        - name: Build And Deploy
          id: builddeploy
