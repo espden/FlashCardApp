@@ -22,9 +22,11 @@ jobs:
           dotnet-version: '7.x'
           include-prerelease: true
           
-      - name: Initialize user secrets
+      - name: Print connection string
         shell: pwsh
-        run: dotnet user-secrets init;
+        env:
+          connection: ${{ secrets.CONNECTIONSTRING }}
+        run:  echo "$env:connection"
       - name: Set secret
         shell: pwsh
         env:
