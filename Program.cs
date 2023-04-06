@@ -10,6 +10,7 @@ builder.Services.AddCors(options =>
                       policy  =>
                       {
                           policy.WithOrigins("https://de-flashcardapi.azurewebsites.net",
+                                             "https://nice-hill-076708d10.2.azurestaticapps.net",
                                               "http://localhost:5021",
                                               "http://localhost:4200")
                                 .AllowAnyHeader()
